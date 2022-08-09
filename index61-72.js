@@ -2,32 +2,95 @@
 করবে এমন ক োড লি খতে পারবে । অর্থাৎ তুমি কি if-else এর ক োড লি খতে পারবে । পারলে একটা
 ক োড লি খে ফে ল ো */
 
+function validName (name) {
+    if (name.length >4){
+        return "your name is valid"
+    }
+    else if(name.length <4 && name.length >1){
+        return "your name is too short"
+    }
+    else{
+        return "provide a valid name"
+    }
+}
+let studentName= "Imtiaz";
+console.log(validName(studentName));
 
 /*62) ত োমাকে যদি বলে একটা while লপু দি য়ে ৭ থে কে ১৯ পর্যন্ত যতগুলা বি জ োড় সংখ্যা আছে
 সে গুলা দে খাতে । তুমি কি সে টা দে খাতে পারবে ? পারলে সে ই ক োড লি খে ফে ল ো। */
-
+function oddNumberInLimit(startValue, endValue) {
+    let i ;
+    if(startValue%2 !== 0){
+        i= startValue;
+    }
+    else{
+        i= startValue +1;
+    }
+    while(i<=endValue){
+        console.log(i);
+        i +=2;
+    }
+}
+oddNumberInLimit(40,50);
+oddNumberInLimit(0,19);
 
 /*63) ত োমাকে যদি বলা হয় তুমি একটা array ডি ক্লে য়ার করবে । এবং সে টার মধ্যে কয়টা উপাদান
 আছে সে টা বে র করবে হবে । সে ই array এর এর মধ্যে চতুর্থ পজি শন এর উপাদান চে ইঞ্জ করতে
 হবে । array এর মধ্যে দইুটা উপাদান য োগ করতে হবে । এবং একটা উপাদান কে বে র করে দি তে
 হবে । তুমি কি সে টা করতে পারবে । */
 
-
+let elementArray = [101, 102, 103, 104, 105];
+console.log(elementArray.length);
+elementArray[3]=100;
+console.log(elementArray);
+let sumOfTwoElement= elementArray[1]+ elementArray[2];
+console.log(sumOfTwoElement);
+let outElement = elementArray.splice(1,1)
+console.log(outElement);
+console.log(elementArray)
 
 /*64) তুমি কি একটা ফর লপু দি য়ে ক োন একটা array এর সবগুলা উপাদানকে দে খাতে পারবে । সে টা
 রে গুলার for লপু হ োক বা for of হ োক। হলে সে ই স্টাইলে একটা ক োড লি খে ফে ল ো। */
+let forOfArray =[51,52,53,54,55];
+for(elm of forOfArray){
+    console.log(elm);
+}
+let forArray = [31,32,33,34,35,36,37,38,39];
+for (let i = 0; i < forArray.length; i++) {
+    console.log(forArray[i]);
+}
 
 
 /*65) ত োমাকে যদি বলা হয়। একটা array এর মধ্যে ৮০ এর চাইতে বড় সংখ্যা থাকলে সে গুলাকে
 console log করে দে খাতে সে টা কি তুমি পারবে ? তাহলে তুমি সে ই ক োড করে ফে ল ো */
 
+let arrayNum = [76,77,78,79,80,81,82,83,84,85];
+for (let i = 0; i < arrayNum.length; i++){
+    let val = arrayNum[i];
+    if(val>80){
+        console.log(val);
+    }
+}
 
 /*66) তি নটা সংখ্যার গুনফল বে র করে ফাইনাল রে জাল্ট আউটপুট হি সে বে রি টার্ন করতে হবে । তুমি
 কি সে ই ক োড লি খতে পারবে । যদি পার ো তাহলে সে ই ক োড লি খে ফে ল ো। */
-
+function multiplyOfNumbers(a,b,c){
+    let multiplied = a*b*c;
+    return multiplied;
+}
+let totalNum= multiplyOfNumbers(4,4,4);
+console.log(totalNum);
 
 /* 67) একটা অবজেক্ট ডিক্লেয়ার করবে । সেটাতে তিনটা প্রপার্টি থাকবে । এবং ক োন একটা প্র োপার্টি
 এর মান চে ইঞ্জ করবা। */
+let mobileFeatures ={
+    brandName: "Samsung Mobile",
+    ram: "4gb",
+    camera: 16
+}
+console.log(mobileFeatures.brandName)
+mobileFeatures.brandName = "Realme Nazro";
+console.log(mobileFeatures.brandName)
 
 
 
